@@ -19,7 +19,27 @@ RULES:
 
 function parseString(string) {
   //implementasi function disini!
-  
+  let alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  let result = {} 
+
+  if (!string) {
+    return {}
+  } else {
+    for (let i = 0; i < string.length; i++) {
+      for (let j = 0; j < alphabet.length; j++) {
+        if(string[i] === alphabet[j]){
+          if(result[string[i]]){
+            result[string[i]] += 1
+          }else{
+            result[string[i]] = 1
+          }
+          break;
+        }
+      }
+    }
+  }
+
+  return result
 }
 
 

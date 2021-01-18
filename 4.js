@@ -63,7 +63,8 @@ function filterPirates(pirates) {
 }
 
 function checkCapital(a){
-
+  // buatan sendiri
+  
 }
 
 console.log(filterPirates([

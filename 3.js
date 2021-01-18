@@ -16,7 +16,22 @@ RULES:
 
 function reverse(arr) {
   //implementasi function disini
-  
+  let result = []
+  for (let i = arr.length - 1; i >= 0; i--) {
+
+    let temp = []
+    for (let j = arr[i].length - 1; j >= 0; j--) {
+      if (arr[i][j] === 1) {
+        temp.push(0)
+      } else if (arr[i][j] === 0) {
+        temp.push(1)
+      } else {
+        temp.push(arr[i][j])
+      }
+    }
+    result.push(temp)
+  }
+  return result
 }
 
 
